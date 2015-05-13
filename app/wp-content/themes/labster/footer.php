@@ -114,6 +114,80 @@
     });
 
 </script>
+
+<script>
+
+window.$ = function(selector) {
+    var selectorType = 'querySelectorAll';
+
+    if (selector.indexOf('#') === 0) {
+        selectorType = 'getElementById';
+        selector = selector.substr(1, selector.length);
+    }
+
+    return document[selectorType](selector);
+};
+
+
+$window = $(window);
+
+var windowHeight = $window.height();
+
+$window.scroll(function() {
+
+	var windowWidth = $window.width();
+	if (windowWidth > 1000) {
+
+    	var scrollTop = $window.scrollTop();
+
+    	window.requestAnimationFrame(function(){
+
+		// For each element that has a data-type attribute
+			$('.section').each(function(index){
+
+				// Store some variables based on where we are
+				var $self = $(this),
+					topOffset = index * windowHeight,
+					percentage = -(scrollTop - topOffset) / windowHeight * 100;
+		
+				// If this section is in view
+				if ( (scrollTop + windowHeight) > (topOffset) && scrollTop < (windowHeight*1.5) + topOffset ) {
+					
+					$('[data-type="heading-zoom"]', $self).each(function() {
+						
+						var $sprite = $(this);
+						var zoomPercentage = percentage + $sprite.data('offset');
+
+						var scale = (100 - Math.floor(zoomPercentage))/100;
+
+						if (scale >= 1) {
+							$sprite.css({
+								transform: 'translate(-50%, -50%) scale(1)',
+								opacity: 1
+							});
+						} else if (scale > 0) {
+							$sprite.css({
+								transform: 'translate(-50%, -50%) scale(' + scale + ')',
+								opacity: scale
+							});
+						} else {
+							$sprite.css({
+								transform: 'translate(-50%, -50%) scale(0)',
+								opacity: 0
+							});
+						}
+						
+					});
+				
+				}
+		
+			});	// each data-type
+		
+		}); //requestAnimationFrame
+	}
+
+}); // window scroll
+</script>
 <?php 
 
 // Grunticon stuff for lazily loaded svg embedding & styling
