@@ -5,7 +5,7 @@ html {
 }
 
 h1 {
-    font-family: 'nexa_bd', Helvetica;
+    font-family: nexa_bd, Helvetica;
 	font-weight: normal;
 }
 
@@ -22,7 +22,12 @@ p {
 }
 
 a {
-    color: $primary;
+    color: $text;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary;
+    }
 }
 
 ::selection {
