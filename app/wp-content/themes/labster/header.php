@@ -19,6 +19,6 @@
 </head>
 <body <?php echo is_front_page() ? "class='page--home'" : "" ?>>
 <header>
-    
+    <div id="particles-js"></div>
 </header>
 <main>
