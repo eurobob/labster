@@ -63,7 +63,7 @@ header {
 }
 
 .main {
-	margin-top: 150px;
+	margin-top: 20%;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -83,6 +83,6 @@ header {
 		width: 80%;
 		padding-top: 10%;
 		/*@TODO should 150px be a percentage? */
-		margin: calc(40% - 150px) auto 0;
+		margin: calc(40% - 20%) auto 0;
 		position: relative;
 	}
