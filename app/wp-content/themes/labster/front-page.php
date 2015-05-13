@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<div class="area">
+	<div class="area__inner">
+
 <?php 
 	$music = new WP_Query("posts_per_page=-1&orderby=post_date&order=DESC&post_status=publish");
 
@@ -16,5 +19,7 @@
 	    endwhile;
 	endif;
 ?>
+	</div>
+</div>
 
 <?php get_footer(); ?>

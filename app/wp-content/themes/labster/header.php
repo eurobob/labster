@@ -20,5 +20,6 @@
 <body <?php echo is_front_page() ? "class='page--home'" : "" ?>>
 <header>
     <div id="particles-js"></div>
+    <h1 class="site-logo">Labster</h1>
 </header>
-<main>
+<main class="main">
