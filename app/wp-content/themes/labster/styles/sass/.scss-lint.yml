@@ -1,0 +1,56 @@
+linters:
+  BorderZero:
+    enabled: true
+  ColorKeyword:
+    enabled: true
+  ColorVariable:
+    enabled: false
+  Comment:
+    enabled: false
+  DeclarationOrder:
+    enabled: true
+  DuplicateProperty:
+    enabled: false
+  EmptyLineBetweenBlocks:
+    enabled: false
+    exclude:
+        - 'libraries/*'
+  EmptyRule:
+    enabled: false
+  FinalNewline:
+    enabled: false
+  HexLength:
+    enabled: true
+  Indentation:
+    enabled: false
+    width: 4
+    exclude:
+        - 'libraries/*'
+  MergeableSelector:
+    enabled: true
+  PlaceholderInExtend:
+    enabled: true
+  PropertySortOrder:
+    enabled: false
+    exclude:
+        - 'libraries/*'
+  SelectorDepth:
+    enabled: false
+  SelectorFormat:
+    enabled: false
+  Shorthand:
+    enabled: true
+  SingleLinePerSelector:
+    enabled: true
+  SpaceBetweenParens:
+    enabled: true
+    exclude:
+        - 'libraries/*'
+  StringQuotes:
+    enabled: true
+  UnnecessaryParentReference:
+    enabled: true
+  ZeroUnit:
+    enabled: true
+    exclude:
+        - 'objects/_sprites.scss'
