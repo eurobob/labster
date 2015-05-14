@@ -126,7 +126,7 @@ var windowHeight = $window.height();
 $window.scroll(function() {
 
 	var windowWidth = $window.width(),
-		paddingTop = windowWidth * 0.4;
+		paddingTop = windowWidth * 0.3;
 
 	if (windowWidth > 768) {
 
@@ -137,24 +137,18 @@ $window.scroll(function() {
 		var $logo = $('.site-logo');
 		var $header = $('header');
 
-		var scale = (100 - Math.floor(percentage * 0.78) )/100;
-		
-		if (scale >= 1) {
-			//$logo.css({ transform: 'translate(0, -50%) scale(1)' });
-		} else if (scale > 0.65) {
-		} else {
-		}
+		var scale = (100 - Math.floor(percentage * 0.82) )/100;
 
-		if (percentage >= 90) {
-			$header.css({ transform: 'translate(0, -90%) translateZ(0)' });
-		} else if (percentage < 90) {
+		if (percentage >= 82) {
+			$header.css({ transform: 'translate(0, -82%) translateZ(0)' });
+		} else if (percentage < 82) {
 			$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
 		}
 
-		if (percentage >= 88) {
-			$logo.css({ transform: 'translate(0, 96%) scale(0.3)' });
-		} else if (percentage < 88 && percentage > 0) {
-			$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
+		if (percentage >= 82) {
+			$logo.css({ transform: 'translate(0, 50%) scale(0.3)' });
+		} else if (percentage < 82 && percentage > 0) {
+			$logo.css({ transform: 'translate(0, '+ ((percentage/82*100) - 50) +'%) scale(' + scale + ')' });
 		} else if (percentage < 0) {
 			$logo.css({ transform: 'translate(0, -50%) scale(1)' });
 		} 

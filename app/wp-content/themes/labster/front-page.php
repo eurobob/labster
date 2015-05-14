@@ -16,12 +16,14 @@
 	        		<span>16/05</span>
 	        		<span>2015</span>
 	        	</div>
-	        	<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
-	        	<h1 class="post__title">
-	        		<a href="<?php echo $post->post_name; ?>">
-	        			<?php the_title(); ?>
-	        		</a>
-	        	</h1>
+	        	<div class="post__info">
+		        	<h1 class="post__title">
+		        		<a href="<?php echo $post->post_name; ?>">
+		        			<?php the_title(); ?>
+		        		</a>
+		        	</h1>
+		        	<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
+		        </div>
 	        </section>
 
 	<?php 
