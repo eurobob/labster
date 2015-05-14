@@ -172,23 +172,35 @@ header {
 }
 
 .menu-toggle {
-	height: 1.7vw;
-	width: 1.7vw;
+	height: 6vw;
+	width: 6vw;
+	padding: 6.25vw;
 	position: fixed;
 	top: 0;
 	right: 0;
-	padding: 1.65vw;
 	z-index: 20;
 	cursor: pointer;
+
+	@media screen and (min-width: 768px) {
+		height: 1.7vw;
+		width: 1.7vw;
+		padding: 1.65vw;
+	}
 }
 
 .search-toggle {
-	height: 1.7vw;
-	width: 1.7vw;
+	height: 6vw;
+	width: 6vw;
+	padding: 6.25vw;
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 1.65vw;
 	z-index: 20;
 	cursor: pointer;
+
+	@media screen and (min-width: 768px) {
+		height: 1.7vw;
+		width: 1.7vw;
+		padding: 1.65vw;
+	}
 }
