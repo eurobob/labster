@@ -133,6 +133,8 @@ $window.scroll(function() {
 	}
 	var scrollTop = $window.scrollTop();
 
+	window.requestAnimationFrame(function(){
+
 		var percentage = scrollTop / paddingTop * 100;
 
 		if ( scrollTop < paddingTop ) {
@@ -144,7 +146,7 @@ $window.scroll(function() {
 			
 			if (scale >= 1) {
 				$logo.css({ transform: 'translate(0, -50%) scale(1)' });
-			} else if (scale > 0.63) {
+			} else if (scale > 0.65) {
 				$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
 			} else {
 				$logo.css({ transform: 'translate(0, 75%) scale(0.6)' });
@@ -157,6 +159,8 @@ $window.scroll(function() {
 			}
 		
 		}
+
+	});
 
 }); // window scroll
 </script>
