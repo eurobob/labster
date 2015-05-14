@@ -1,6 +1,8 @@
 .footer {
-	background: $text-light;
 	color: #fff;
+	background: linear-gradient(40deg, $primary, $tertiary, $secondary);
+	background-size: 150% 150%;
+	animation: MoveBG 60s ease infinite;
 }
 
 	.footer__links {
@@ -16,6 +18,14 @@
 
 			@media screen and (min-width: 768px) {
 				display: inline-block;
+
+				+ span {
+					margin-left: 1em;
+				}
 			}
+		}
+
+		a {
+			color: #fff;
 		}
 	}

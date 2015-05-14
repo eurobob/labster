@@ -24,6 +24,10 @@
 		        	</h1>
 		        	<p class="post__excerpt">
 		        		<?php echo get_the_excerpt(); ?>
+		        		<br>
+		        		<a href="<?php echo $post->post_name; ?>" class="btn">
+		        			Continue reading
+		        		</a>
 		        	</p>
 		        	<div class="post__details">
 		        		<?php the_author(); ?>
