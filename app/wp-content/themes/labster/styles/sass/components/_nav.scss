@@ -9,4 +9,26 @@
 	opacity: 0;
 	transform: translate(0, -10%);
 	transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+	overflow: auto;
 }
+
+	.nav__list {
+		width: 100%;
+		margin: 0;
+		padding: 10% 0;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+		.nav__item {
+			display: block;
+		}
+
+			.nav__link {
+				font-family: nexa_bd;
+				color: #fff;
+
+				&:hover {
+				}
+			}

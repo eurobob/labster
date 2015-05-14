@@ -32,14 +32,14 @@
     <div id="particles-js" class="header__particles"></div>
     <h1 class="logo">Labster</h1>
 </header>
-<nav class="nav">
-    <ul>
+<nav class="nav text--center caps">
+    <ul class="nav__list">
         <li class="nav__item">
-            <a class="nav__link beta" href="Courses">Courses</a>
+            <a class="nav__link giga" href="Courses">Courses</a>
         <li class="nav__item">
-            <a class="nav__link beta" href="Features">Features</a>
+            <a class="nav__link giga" href="Features">Features</a>
         <li class="nav__item">
-            <a class="nav__link beta" href="About">About</a>
+            <a class="nav__link giga" href="About">About</a>
     </ul>
 </nav>
 <main class="main">
