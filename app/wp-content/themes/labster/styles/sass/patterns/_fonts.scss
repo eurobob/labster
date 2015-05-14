@@ -23,9 +23,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'nexa_lt';
     src: url('../../fonts/nexa_light-webfont.eot');
@@ -34,6 +31,18 @@
          url('../../fonts/nexa_light-webfont.woff') format('woff'),
          url('../../fonts/nexa_light-webfont.ttf') format('truetype'),
          url('../../fonts/nexa_light-webfont.svg#nexa_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nexa_bk';
+    src: url('../../fonts/nexa_book-webfont.eot');
+    src: url('../../fonts/nexa_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/nexa_book-webfont.woff2') format('woff2'),
+         url('../../fonts/nexa_book-webfont.woff') format('woff'),
+         url('../../fonts/nexa_book-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
