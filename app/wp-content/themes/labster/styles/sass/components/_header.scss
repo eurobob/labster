@@ -42,7 +42,8 @@ canvas {
 
 [id=menu-checkbox]:checked {
 	~ .nav {
-		display: block;
+		transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility 0s 0s;
+		visibility: visible;
 		transform: translate(0, 0);
 		opacity: 1;
 	}
