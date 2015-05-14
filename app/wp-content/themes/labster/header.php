@@ -20,5 +20,7 @@
 <header>
     <div id="particles-js"></div>
     <h1 class="site-logo">Labster</h1>
+
+    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'menu.svg'); ?>
 </header>
 <main class="main">

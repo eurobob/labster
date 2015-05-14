@@ -1,5 +1,20 @@
 </main>
 
+
+<footer class="site-footer">
+	
+	<div class="credits text--center">
+		<span>&copy; <?php echo date("Y"); ?> Labster ApS</span>
+		<span>CVR: 34457808</span>
+		<span>
+			<a href="#">Terms and Conditions</a>
+		</span>
+		<span>
+			<a href="#">Privacy Policy</a>
+		</span>
+	</div>
+</footer>
+
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 

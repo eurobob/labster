@@ -29,7 +29,7 @@ canvas {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(230deg, $secondary, #4b79cf, $primary);
+  background: linear-gradient(230deg, $secondary, $tertiary, $primary);
   background-size: 150% 150%;
   animation: MoveBG 60s ease infinite;
 }
@@ -162,3 +162,17 @@ header {
 		}
 
 
+.site-footer {
+	background: linear-gradient(230deg, $primary, $tertiary, $secondary );
+	background-size: 150% 150%;
+	animation: MoveBG 60s ease infinite;
+	color: #fff;
+	padding: 5%;
+}
+
+[id=svg-menu] {
+	height: 40px;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
