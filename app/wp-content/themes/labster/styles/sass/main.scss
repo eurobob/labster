@@ -29,7 +29,7 @@ canvas {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+  background: linear-gradient(230deg, $secondary, #4b79cf, $primary);
   background-size: 150% 150%;
   animation: MoveBG 60s ease infinite;
 }
@@ -146,6 +146,15 @@ header {
 
 		.post__title {
 			line-height: .9;
+		}
+
+		.post__excerpt {
+			display: none;
+
+			@media screen and (min-width: 768px) {
+				display: block;
+				margin-top: 1.5em;
+			}
 		}
 		
 		.post__details {

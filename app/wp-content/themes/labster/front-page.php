@@ -22,7 +22,11 @@
 		        			<?php the_title(); ?>
 		        		</a>
 		        	</h1>
+		        	<p class="post__excerpt">
+		        		<?php echo get_the_excerpt(); ?>
+		        	</p>
 		        	<div class="post__details">
+		        		<?php the_author(); ?>
 		        		<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
 		        	</div>
 		        </div>
