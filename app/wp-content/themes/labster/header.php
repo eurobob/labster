@@ -35,11 +35,11 @@
 <nav class="nav text--center caps">
     <ul class="nav__list">
         <li class="nav__item">
-            <a class="nav__link giga" href="Courses">Courses</a>
+            <a class="nav__link mega" href="Courses">Courses</a>
         <li class="nav__item">
-            <a class="nav__link giga" href="Features">Features</a>
+            <a class="nav__link mega" href="Features">Features</a>
         <li class="nav__item">
-            <a class="nav__link giga" href="About">About</a>
+            <a class="nav__link mega" href="About">About</a>
     </ul>
 </nav>
 <main class="main">
