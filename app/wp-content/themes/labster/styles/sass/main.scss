@@ -22,3 +22,21 @@
 	z-index: 0;
 	transform: translateZ(0);
 }
+
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	
+	svg {
+		height: 1em;
+		width: 1em;
+		margin-right: .5em;
+	}
+}
+
+svg {
+	.svg--purple & {
+		fill: $secondary;
+	}
+}

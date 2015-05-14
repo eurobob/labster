@@ -53,3 +53,11 @@
 		.post__details {
 			margin-top: 1.5em;
 		}
+
+			.post__detail {
+				color: $secondary;
+
+				+ .post__detail {
+					margin-left: 1.5em;
+				}
+			}

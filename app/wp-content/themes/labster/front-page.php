@@ -30,8 +30,14 @@
 		        		</a>
 		        	</p>
 		        	<div class="post__details">
-		        		<?php the_author(); ?>
-		        		<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
+		        		<span class="post__detail">
+			        		<span class="icon svg-author svg--purple" data-grunticon-embed></span>
+			        		<?php the_author(); ?>
+			        	</span>
+			        	<span class="post__detail">
+			        		<span class="icon svg-time svg--purple" data-grunticon-embed></span>
+			        		<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
+			        	</span>
 		        	</div>
 		        </div>
 	        </section>
