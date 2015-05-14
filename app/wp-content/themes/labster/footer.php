@@ -134,42 +134,45 @@
 
 <script>
 
-$window = $(window);
+window.onload = function(e){ 
 
-var windowHeight = $window.height();
+	$window = $(window);
 
-$window.scroll(function() {
+	var windowHeight = $window.height();
 
-	var windowWidth = $window.width(),
-		paddingTop = windowWidth * 0.3;
+	$window.scroll(function() {
 
-	if (windowWidth > 768) {
+		var windowWidth = $window.width(),
+			paddingTop = windowWidth * 0.3;
 
-		var scrollTop = $window.scrollTop();
+		if (windowWidth > 768) {
 
-		var percentage = scrollTop / paddingTop * 100;
-				
-		var $logo = $('.site-logo');
-		var $header = $('header');
+			var scrollTop = $window.scrollTop();
 
-		var scale = (100 - Math.floor(percentage * 0.82) )/100;
+			var percentage = scrollTop / paddingTop * 100;
+					
+			var $logo = $('.site-logo');
+			var $header = $('header');
 
-		if (percentage >= 82) {
-			$header.css({ transform: 'translate(0, -82%) translateZ(0)' });
-		} else if (percentage < 82) {
-			$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
+			var scale = (100 - Math.floor(percentage * 0.82) )/100;
+
+			if (percentage >= 82) {
+				$header.css({ transform: 'translate(0, -82%) translateZ(0)' });
+			} else if (percentage < 82) {
+				$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
+			}
+
+			if (percentage >= 82) {
+				$logo.css({ transform: 'translate(0, 50%) scale(0.3)' });
+			} else if (percentage < 82 && percentage > 0) {
+				$logo.css({ transform: 'translate(0, '+ ((percentage/82*100) - 50) +'%) scale(' + scale + ')' });
+			} else if (percentage < 0) {
+				$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+			} 
 		}
 
-		if (percentage >= 82) {
-			$logo.css({ transform: 'translate(0, 50%) scale(0.3)' });
-		} else if (percentage < 82 && percentage > 0) {
-			$logo.css({ transform: 'translate(0, '+ ((percentage/82*100) - 50) +'%) scale(' + scale + ')' });
-		} else if (percentage < 0) {
-			$logo.css({ transform: 'translate(0, -50%) scale(1)' });
-		} 
-	}
-
-}); // window scroll
+	}); // window scroll
+}
 </script>
 <?php 
 

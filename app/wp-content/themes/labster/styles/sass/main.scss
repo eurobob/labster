@@ -69,6 +69,7 @@ header {
 	font-size: 10vw;
 	transform: translate(0, -50%) translateZ(0);
 	will-change: transform;
+	pointer-events: none;
 }
 
 .main {
@@ -171,12 +172,23 @@ header {
 }
 
 .menu-toggle {
-	height: 2vw;
-	width: 2vw;
+	height: 1.7vw;
+	width: 1.7vw;
 	position: fixed;
 	top: 0;
 	right: 0;
-	padding: 1.5vw;
+	padding: 1.65vw;
+	z-index: 20;
+	cursor: pointer;
+}
+
+.search-toggle {
+	height: 1.7vw;
+	width: 1.7vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1.65vw;
 	z-index: 20;
 	cursor: pointer;
 }

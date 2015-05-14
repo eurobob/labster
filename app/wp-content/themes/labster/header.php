@@ -23,6 +23,11 @@
     <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'menu.svg'); ?>
 </label>
 
+<input type="checkbox" id="search-checkbox">
+<label for="search-checkbox" class="search-toggle">
+    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'search.svg'); ?>
+</label>
+
 <header>
     <div id="particles-js"></div>
     <h1 class="site-logo">Labster</h1>
