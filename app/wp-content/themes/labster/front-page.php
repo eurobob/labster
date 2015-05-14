@@ -24,11 +24,10 @@
 		        	</h1>
 		        	<p class="post__excerpt">
 		        		<?php echo get_the_excerpt(); ?>
-		        		<br>
-		        		<a href="<?php echo $post->post_name; ?>" class="btn">
-		        			Continue reading
-		        		</a>
 		        	</p>
+	        		<a href="<?php echo $post->post_name; ?>" class="btn post__continue">
+	        			Continue reading
+	        		</a>
 		        	<div class="post__details">
 		        		<span class="post__detail">
 			        		<span class="icon svg-author svg--purple" data-grunticon-embed></span>

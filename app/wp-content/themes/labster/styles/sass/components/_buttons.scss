@@ -1,0 +1,14 @@
+/*.btn {
+	padding: .6em 1em;
+	background: linear-gradient(40deg, $secondary, $primary);
+	color: #fff;
+	float: left;
+	border-radius: 6px;
+}*/
+
+.btn {
+	color: $primary;
+	margin-top: 1em;
+	float: left;
+	clear: both;
+}
