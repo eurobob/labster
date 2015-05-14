@@ -229,15 +229,3 @@ p {
         margin-top: 1em;
     }
 }
-
-.small {
-    @include font-size(1.4);
-}
-
-.caps {
-    text-transform: uppercase;
-}
-
-.text--center {
-    text-align: center;
-}

@@ -29,8 +29,17 @@
 </label>
 
 <header class="header">
-    <div id="particles-js"></div>
+    <div id="particles-js" class="header__particles"></div>
     <h1 class="logo">Labster</h1>
-
 </header>
+<nav class="nav">
+    <ul>
+        <li class="nav__item">
+            <a class="nav__link beta" href="Courses">Courses</a>
+        <li class="nav__item">
+            <a class="nav__link beta" href="Features">Features</a>
+        <li class="nav__item">
+            <a class="nav__link beta" href="About">About</a>
+    </ul>
+</nav>
 <main class="main">

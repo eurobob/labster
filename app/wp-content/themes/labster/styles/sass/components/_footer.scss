@@ -1,0 +1,21 @@
+.footer {
+	background: $text-light;
+	color: #fff;
+}
+
+	.footer__links {
+		padding: 5%;
+	}
+
+	.footer__credits {
+		background: $text;
+		padding: 40px;
+
+		span {
+			display: block;
+
+			@media screen and (min-width: 768px) {
+				display: inline-block;
+			}
+		}
+	}

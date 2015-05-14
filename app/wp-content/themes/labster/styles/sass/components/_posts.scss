@@ -1,0 +1,55 @@
+.post {
+
+	@media screen and (min-width: 768px) {
+		display: table;
+	}
+
+	+ .post {
+		margin-top: 5%;
+		padding-top: 5%;
+		border-top: 1px solid $light-grey;
+	}
+}
+
+	.post__date {
+		font-family: nexa_bd;
+		color: $text-light;
+
+		@media screen and (min-width: 768px) {
+			display: table-cell;
+			vertical-align: top;
+			text-align: right;
+			
+			span {
+				width: 4em;
+				display: block;
+			}
+		}
+
+	}
+
+	.post__info {
+
+		@media screen and (min-width: 768px) {
+			display: table-cell;
+			vertical-align: top;
+			padding-left: 3%;
+		}
+	}
+
+		.post__title {
+			line-height: .9;
+		}
+
+		.post__excerpt {
+			display: none;
+
+			@media screen and (min-width: 768px) {
+				display: block;
+				margin-top: 1.5em;
+			}
+		}
+		
+		.post__details {
+			margin-top: 1.5em;
+		}
