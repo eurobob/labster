@@ -133,8 +133,6 @@ $window.scroll(function() {
 	}
 	var scrollTop = $window.scrollTop();
 
-	window.requestAnimationFrame(function(){
-
 		var percentage = scrollTop / paddingTop * 100;
 
 		if ( scrollTop < paddingTop ) {
@@ -145,11 +143,9 @@ $window.scroll(function() {
 			var scale = (100 - Math.floor(percentage * 0.5) )/100;
 			
 			if (scale >= 1) {
-				$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+				//$logo.css({ transform: 'translate(0, -50%) scale(1)' });
 			} else if (scale > 0.65) {
-				$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
 			} else {
-				$logo.css({ transform: 'translate(0, 75%) scale(0.6)' });
 			}
 
 			if (percentage >= 75) {
@@ -157,10 +153,14 @@ $window.scroll(function() {
 			} else if (percentage < 75) {
 				$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
 			}
+
+			if (percentage >= 73) {
+				$logo.css({ transform: 'translate(0, 72%) scale(0.6)' });
+			} else if (percentage < 73) {
+				$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
+			}
 		
 		}
-
-	});
 
 }); // window scroll
 </script>
