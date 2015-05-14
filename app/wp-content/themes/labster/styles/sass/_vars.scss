@@ -19,24 +19,24 @@ $base--link-color:      $primary;
     #TYPE
 \*------------------------------------*/
 
-@mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
+@mixin font-size($size-value: 16) {
+  font-size: $size-value + px;
+  font-size: ($size-value / 16) + rem;
 }
 
 // Fonts
 
-$zetta-size: 24;
-$exa-size: 18;
-$peta-size: 14;
-$tera-size: 12.8;
-$giga-size: 8;
-$mega-size: 7;
-$kilo-size: 6;
-$hecto-size: 5;
-$h1-size: 3;
-$h2-size: 2.4;
-$h3-size: 2;
-$h4-size: 1.8;
-$h5-size: 1.6;
-$h6-size: 1.2;
+$zetta-size: 240;
+$exa-size: 180;
+$peta-size: 140;
+$tera-size: 128;
+$giga-size: 80;
+$mega-size: 70;
+$kilo-size: 60;
+$hecto-size: 50;
+$h1-size: 40;
+$h2-size: 30;
+$h3-size: 20;
+$h4-size: 18;
+$h5-size: 16;
+$h6-size: 12;

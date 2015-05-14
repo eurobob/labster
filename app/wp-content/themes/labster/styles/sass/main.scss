@@ -11,6 +11,10 @@ body {
 	height: 100%;
 }
 
+img {
+	max-width: 100%;
+}
+
 canvas {
 	display: block;
 	vertical-align: bottom;
@@ -50,7 +54,7 @@ header {
 	will-change: transform;
 
 	@media screen and (min-width: 768px) {
-		padding-top: 20%;
+		padding-top: 40%;
 	}
 }
 
