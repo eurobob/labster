@@ -117,3 +117,13 @@ header {
 		border-top: 1px solid $light-grey;
 	}
 }
+
+	.post__date {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.post__title {
+		display: inline-block;
+		vertical-align: top;
+	}

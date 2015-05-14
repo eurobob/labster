@@ -216,9 +216,14 @@ h6,
 p {
     @include font-size($h4-size);
     line-height: 1.5;
-	
+    margin: 0;
+
     @media screen and (min-width: 768px) {
         @include font-size($h3-size);
+    }
+
+    + p {
+        margin-top: 1em;
     }
 }
 
