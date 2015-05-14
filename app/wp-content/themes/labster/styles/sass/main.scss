@@ -170,9 +170,13 @@ header {
 	padding: 5%;
 }
 
-[id=svg-menu] {
-	height: 40px;
+.menu-toggle {
+	height: 2vw;
+	width: 2vw;
 	position: fixed;
 	top: 0;
 	right: 0;
+	padding: 1.5vw;
+	z-index: 20;
+	cursor: pointer;
 }

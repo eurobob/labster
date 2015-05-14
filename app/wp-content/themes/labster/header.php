@@ -17,10 +17,15 @@
     <!--<script src="/wp-content/themes/labster/js/vendor/modernizr.custom.js"></script>-->
 </head>
 <body <?php echo is_front_page() ? "class='page--home'" : "" ?>>
+
+<input type="checkbox" id="menu-checkbox">
+<label for="menu-checkbox" class="menu-toggle">
+    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'menu.svg'); ?>
+</label>
+
 <header>
     <div id="particles-js"></div>
     <h1 class="site-logo">Labster</h1>
 
-    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'menu.svg'); ?>
 </header>
 <main class="main">
