@@ -233,3 +233,7 @@ p {
 .small {
     @include font-size(1.4);
 }
+
+.caps {
+    text-transform: uppercase;
+}

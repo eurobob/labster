@@ -12,9 +12,9 @@
 	?>
 
 	        <section class="post">
-	        	<div class="post__date">
-	        		<span>16/05</span>
-	        		<span>2015</span>
+	        	<div class="post__date gamma caps">
+	        		<span><?php the_time('d/M'); ?></span>
+	        		<span><?php the_time('Y'); ?></span>
 	        	</div>
 	        	<div class="post__info">
 		        	<h1 class="post__title">
@@ -22,7 +22,9 @@
 		        			<?php the_title(); ?>
 		        		</a>
 		        	</h1>
-		        	<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
+		        	<div class="post__details">
+		        		<?php if(function_exists('mtr_print')) mtr_print($post->ID); ?>
+		        	</div>
 		        </div>
 	        </section>
 

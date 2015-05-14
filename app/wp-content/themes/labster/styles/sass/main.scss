@@ -107,6 +107,10 @@ header {
 
 .post {
 
+	@media screen and (min-width: 768px) {
+		display: table;
+	}
+
 	+ .post {
 		margin-top: 5%;
 		padding-top: 5%;
@@ -115,11 +119,37 @@ header {
 }
 
 	.post__date {
-		display: inline-block;
-		vertical-align: top;
+		font-family: nexa_bd;
+		color: $text-light;
+
+		@media screen and (min-width: 768px) {
+			display: table-cell;
+			vertical-align: top;
+			text-align: right;
+			
+			span {
+				width: 4em;
+				display: block;
+			}
+		}
+
 	}
 
 	.post__info {
-		display: inline-block;
-		vertical-align: top;
+
+		@media screen and (min-width: 768px) {
+			display: table-cell;
+			vertical-align: top;
+			padding-left: 3%;
+		}
 	}
+
+		.post__title {
+			line-height: .9;
+		}
+		
+		.post__details {
+			margin-top: 1.5em;
+		}
+
+
