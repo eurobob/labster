@@ -155,7 +155,9 @@ $window.scroll(function() {
 			$logo.css({ transform: 'translate(0, 96%) scale(0.3)' });
 		} else if (percentage < 88 && percentage > 0) {
 			$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
-		}
+		} else if (percentage < 0) {
+			$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+		} 
 	}
 
 }); // window scroll

@@ -17,10 +17,6 @@ h3,h4,h5,h6 {
     font-weight: 500;
 }
 
-p {
-	font-weight: 300;
-}
-
 a {
     color: $text;
     text-decoration: none;
@@ -48,11 +44,11 @@ a {
         @include font-size($giga-size);
     }
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($peta-size);
     }
 
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($zetta-size);
     }
 }
@@ -61,11 +57,11 @@ a {
 %exa {
     @include font-size($giga-size);
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($peta-size);
     }
 
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($exa-size);
     }
 }
@@ -74,11 +70,11 @@ a {
 %peta {
     @include font-size($kilo-size);
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($giga-size);
     }
 
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($peta-size);
     }
 }
@@ -87,11 +83,11 @@ a {
 %tera {
     @include font-size($kilo-size);
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($giga-size);
     }
 
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($tera-size);
     }
 }
@@ -100,11 +96,11 @@ a {
 %giga {
     @include font-size($kilo-size);
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
     @include font-size($mega-size);
     }
 
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
     @include font-size($giga-size);
     }
   
@@ -126,7 +122,7 @@ a {
       @include font-size($kilo-size);
     }
 
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
       @include font-size($mega-size);
     }
 }
@@ -135,7 +131,7 @@ a {
 %kilo {
     @include font-size($h2-size);
     
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
       @include font-size($kilo-size);
     }
 }
@@ -144,7 +140,7 @@ a {
 %hecto {
     @include font-size($h2-size);
     
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
       @include font-size($hecto-size);
     }
 }
@@ -154,10 +150,10 @@ h1,
 %alpha {
     @include font-size($h3-size);
   
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($h2-size);
     }
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($h1-size);
     }
 }
@@ -167,10 +163,10 @@ h2,
 %beta {
     @include font-size($h4-size);
     
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($h3-size);
     }
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($h2-size);
     }
 }
@@ -180,10 +176,10 @@ h3,
 %gamma {
     @include font-size($h5-size);
     
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($h4-size);
     }
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($h3-size);
     }
 }
@@ -193,10 +189,10 @@ h4,
 %delta {
     @include font-size($h6-size);
     
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($h5-size);
     }
-    @media screen and (min-width: 1220px) {
+    @media screen and (min-width: 1200px) {
         @include font-size($h4-size);
     }
 }
@@ -206,7 +202,7 @@ h5,
 %epsilon {
     @include font-size($h6-size);
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 768px) {
         @include font-size($h5-size);
     }
 }
@@ -218,11 +214,11 @@ h6,
 }
 
 p {
-    @include font-size($h5-size);
+    @include font-size($h4-size);
     line-height: 1.5;
 	
-    @media screen and (min-width: 760px) {
-        @include font-size($h4-size);
+    @media screen and (min-width: 768px) {
+        @include font-size($h3-size);
     }
 }
 
