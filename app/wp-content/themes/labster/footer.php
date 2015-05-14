@@ -128,39 +128,35 @@ $window.scroll(function() {
 	var windowWidth = $window.width(),
 		paddingTop = windowWidth * 0.4;
 
-	if (windowWidth >= 768) {
-		// paddingTop = windowWidth * ;
-	}
-	var scrollTop = $window.scrollTop();
+	if (windowWidth > 768) {
+
+		var scrollTop = $window.scrollTop();
 
 		var percentage = scrollTop / paddingTop * 100;
-
-		if ( scrollTop < paddingTop ) {
 				
-			var $logo = $('.site-logo');
-			var $header = $('header');
+		var $logo = $('.site-logo');
+		var $header = $('header');
 
-			var scale = (100 - Math.floor(percentage * 0.5) )/100;
-			
-			if (scale >= 1) {
-				//$logo.css({ transform: 'translate(0, -50%) scale(1)' });
-			} else if (scale > 0.65) {
-			} else {
-			}
-
-			if (percentage >= 75) {
-				$header.css({ transform: 'translate(0, -75%) translateZ(0)' });
-			} else if (percentage < 75) {
-				$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
-			}
-
-			if (percentage >= 73) {
-				$logo.css({ transform: 'translate(0, 72%) scale(0.6)' });
-			} else if (percentage < 73) {
-				$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
-			}
+		var scale = (100 - Math.floor(percentage * 0.78) )/100;
 		
+		if (scale >= 1) {
+			//$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+		} else if (scale > 0.65) {
+		} else {
 		}
+
+		if (percentage >= 90) {
+			$header.css({ transform: 'translate(0, -90%) translateZ(0)' });
+		} else if (percentage < 90) {
+			$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
+		}
+
+		if (percentage >= 88) {
+			$logo.css({ transform: 'translate(0, 96%) scale(0.3)' });
+		} else if (percentage < 88 && percentage > 0) {
+			$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
+		}
+	}
 
 }); // window scroll
 </script>
