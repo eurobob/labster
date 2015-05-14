@@ -165,7 +165,7 @@ $window.scroll(function() {
 <?php 
 
 // Grunticon stuff for lazily loaded svg embedding & styling
-$embeddedSVGdir = 'wp-content/themes/labster/dist/img/svg/embed/';
+$embeddedSVGdir = '/wp-content/themes/labster/dist/img/svg/embed/';
 ?>
 <script src="<?php echo $embeddedSVGdir; ?>grunticon.loader.js"></script>
 <script>
