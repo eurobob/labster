@@ -14,8 +14,7 @@
     	<link rel="stylesheet" href="/wp-content/themes/labster/dist/css/main.css">
     <!--<![endif]-->
     
-    <script src="/wp-content/themes/labster/js/vendor/tinyfader.min.js"></script>
-    <script src="/wp-content/themes/labster/js/vendor/modernizr.custom.js"></script>
+    <!--<script src="/wp-content/themes/labster/js/vendor/modernizr.custom.js"></script>-->
 </head>
 <body <?php echo is_front_page() ? "class='page--home'" : "" ?>>
 <header>

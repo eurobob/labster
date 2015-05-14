@@ -1,4 +1,6 @@
 </main>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
@@ -117,81 +119,51 @@
 
 <script>
 
-window.$ = function(selector) {
-    var selectorType = 'querySelectorAll';
-
-    if (selector.indexOf('#') === 0) {
-        selectorType = 'getElementById';
-        selector = selector.substr(1, selector.length);
-    }
-
-    return document[selectorType](selector);
-};
-
-
 $window = $(window);
 
 var windowHeight = $window.height();
 
 $window.scroll(function() {
 
-	var windowWidth = $window.width();
-	if (windowWidth > 1000) {
+	var windowWidth = $window.width(),
+		paddingTop = windowWidth * 0.4;
 
-    	var scrollTop = $window.scrollTop();
-
-    	window.requestAnimationFrame(function(){
-
-		// For each element that has a data-type attribute
-			$('.section').each(function(index){
-
-				// Store some variables based on where we are
-				var $self = $(this),
-					topOffset = index * windowHeight,
-					percentage = -(scrollTop - topOffset) / windowHeight * 100;
-		
-				// If this section is in view
-				if ( (scrollTop + windowHeight) > (topOffset) && scrollTop < (windowHeight*1.5) + topOffset ) {
-					
-					$('[data-type="heading-zoom"]', $self).each(function() {
-						
-						var $sprite = $(this);
-						var zoomPercentage = percentage + $sprite.data('offset');
-
-						var scale = (100 - Math.floor(zoomPercentage))/100;
-
-						if (scale >= 1) {
-							$sprite.css({
-								transform: 'translate(-50%, -50%) scale(1)',
-								opacity: 1
-							});
-						} else if (scale > 0) {
-							$sprite.css({
-								transform: 'translate(-50%, -50%) scale(' + scale + ')',
-								opacity: scale
-							});
-						} else {
-							$sprite.css({
-								transform: 'translate(-50%, -50%) scale(0)',
-								opacity: 0
-							});
-						}
-						
-					});
-				
-				}
-		
-			});	// each data-type
-		
-		}); //requestAnimationFrame
+	if (windowWidth >= 768) {
+		// paddingTop = windowWidth * ;
 	}
+	var scrollTop = $window.scrollTop();
+
+		var percentage = scrollTop / paddingTop * 100;
+
+		if ( scrollTop < paddingTop ) {
+				
+			var $logo = $('.site-logo');
+			var $header = $('header');
+
+			var scale = (100 - Math.floor(percentage * 0.5) )/100;
+			
+			if (scale >= 1) {
+				$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+			} else if (scale > 0.63) {
+				$logo.css({ transform: 'translate(0, '+ ((percentage/60*100) - 50) +'%) scale(' + scale + ')' });
+			} else {
+				$logo.css({ transform: 'translate(0, 75%) scale(0.6)' });
+			}
+
+			if (percentage >= 75) {
+				$header.css({ transform: 'translate(0, -75%) translateZ(0)' });
+			} else if (percentage < 75) {
+				$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
+			}
+		
+		}
 
 }); // window scroll
 </script>
 <?php 
 
 // Grunticon stuff for lazily loaded svg embedding & styling
-$embeddedSVGdir = 'wp-content/themes/labster/dist/img/svg/embed';
+$embeddedSVGdir = 'wp-content/themes/labster/dist/img/svg/embed/';
 ?>
 <script src="<?php echo $embeddedSVGdir; ?>grunticon.loader.js"></script>
 <script>
