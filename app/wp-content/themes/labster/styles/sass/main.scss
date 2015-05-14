@@ -40,10 +40,45 @@ canvas {
     100%{background-position:0% 50%}
 }
 
+.menu-toggle {
+	height: 6vw;
+	width: 6vw;
+	padding: 6.25vw;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 20;
+	cursor: pointer;
 
+	@media screen and (min-width: 769px) {
+		height: 1.7vw;
+		width: 1.7vw;
+		padding: 1.65vw;
+	}
 
+	&:checked {
+		display: none;
+	}
+}
 
-header {
+.search-toggle {
+	height: 8vw;
+	width: 8vw;
+	padding: 6vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	cursor: pointer;
+
+	@media screen and (min-width: 769px) {
+		height: 1.7vw;
+		width: 1.7vw;
+		padding: 1.65vw;
+	}
+}
+
+.header {
 	width: 100%;
 	padding-top: 20%;
 	position: fixed;
@@ -58,7 +93,7 @@ header {
 	}
 }
 
-.site-logo {
+.logo {
 	width: 100%;
 	margin: 0;
 	text-align: center;
@@ -163,44 +198,31 @@ header {
 		}
 
 
-.site-footer {
+.footer {
 	background: linear-gradient(230deg, $primary, $tertiary, $secondary );
 	background-size: 150% 150%;
 	animation: MoveBG 60s ease infinite;
+	background: $text;
 	color: #fff;
-	padding: 5%;
 }
 
-.menu-toggle {
-	height: 6vw;
-	width: 6vw;
-	padding: 6.25vw;
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 20;
-	cursor: pointer;
-
-	@media screen and (min-width: 769px) {
-		height: 1.7vw;
-		width: 1.7vw;
-		padding: 1.65vw;
+	.footer__links {
+		padding: 5%;
 	}
-}
 
-.search-toggle {
-	height: 8vw;
-	width: 8vw;
-	padding: 6vw;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 20;
-	cursor: pointer;
+	.footer__credits {
+		background: $text-light;
+		padding: 40px;
 
-	@media screen and (min-width: 769px) {
-		height: 1.7vw;
-		width: 1.7vw;
-		padding: 1.65vw;
+		span {
+			display: block;
+
+			@media screen and (min-width: 768px) {
+				display: inline-block;
+			}
+		}
 	}
+
+.hide {
+	display: none;
 }

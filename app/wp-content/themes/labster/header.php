@@ -18,19 +18,19 @@
 </head>
 <body <?php echo is_front_page() ? "class='page--home'" : "" ?>>
 
-<input type="checkbox" id="menu-checkbox">
+<input type="checkbox" id="menu-checkbox" class="hide">
 <label for="menu-checkbox" class="menu-toggle">
     <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'menu.svg'); ?>
 </label>
 
-<input type="checkbox" id="search-checkbox">
+<input type="checkbox" id="search-checkbox" class="hide">
 <label for="search-checkbox" class="search-toggle">
     <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'search.svg'); ?>
 </label>
 
-<header>
+<header class="header">
     <div id="particles-js"></div>
-    <h1 class="site-logo">Labster</h1>
+    <h1 class="logo">Labster</h1>
 
 </header>
 <main class="main">

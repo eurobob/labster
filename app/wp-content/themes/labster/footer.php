@@ -1,9 +1,24 @@
 </main>
 
 
-<footer class="site-footer">
+<footer class="footer">
+
+	<div class="footer__links">
+		<div>
+			<h4>Our Labs</h4>
+		</div>
+		<div>
+			<h4>About</h4>
+		</div>
+		<div>
+			<h4>Join Us</h4>
+		</div>
+		<div>
+			<h4>Contact Us</h4>
+		</div>
+	</div>
 	
-	<div class="credits text--center">
+	<div class="footer__credits text--center">
 		<span>&copy; <?php echo date("Y"); ?> Labster ApS</span>
 		<span>CVR: 34457808</span>
 		<span>
@@ -151,8 +166,8 @@ window.onload = function(e){
 
 			var percentage = scrollTop / paddingTop * 100;
 					
-			var $logo = $('.site-logo');
-			var $header = $('header');
+			var $logo = $('.logo');
+			var $header = $('.header');
 
 			var scale = (100 - Math.floor(percentage * 0.82) )/100;
 
