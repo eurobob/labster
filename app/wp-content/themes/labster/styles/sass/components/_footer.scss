@@ -1,8 +1,6 @@
 .footer {
 	color: #fff;
-	background: linear-gradient(40deg, $primary, $tertiary, $secondary);
-	background-size: 150% 150%;
-	animation: MoveBG 60s ease infinite;
+	background-color: $light-grey;
 }
 
 	.footer__links {
