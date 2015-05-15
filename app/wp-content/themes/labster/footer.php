@@ -5,24 +5,24 @@
 
 	<div class="footer__links">
 		<div class="footer__section">
-			<h4 class="footer__title alpha">Our Labs</h4>
+			<h4 class="footer__title beta">Our Labs</h4>
 			<a class="footer__item gamma" href="/features">Features</a>
 			<a class="footer__item gamma" href="/courses">Course Catalog</a>
 			<a class="footer__item gamma" href="/testimonial">Testimonials</a>
 		</div>
 		<div class="footer__section">
-			<h4 class="footer__title alpha">About</h4>
+			<h4 class="footer__title beta">About</h4>
 			<a class="footer__item gamma" href="/about">About Us</a>
 			<a class="footer__item gamma" href="/press">Press</a>
 			<a class="footer__item gamma" href="/support">Support</a>
 		</div>
 		<div class="footer__section">
-			<h4 class="footer__title alpha">Join Us</h4>
+			<h4 class="footer__title beta">Join Us</h4>
 			<a class="footer__item gamma" href="/career">Careers</a>
 			<a class="footer__item gamma" href="/ambassador-program">Ambassador Program</a>
 		</div>
 		<div class="footer__section">
-			<h4 class="footer__title alpha">Contact Us</h4>
+			<h4 class="footer__title beta">Contact Us</h4>
 			<a class="footer__item gamma" href="/ambassador-program">Contact Us</a>
 			<p class="footer__item gamma">+45 61437244</p>
 			<div class="footer__item">
