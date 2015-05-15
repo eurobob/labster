@@ -199,6 +199,8 @@ window.onload = function(e){
 		}
 
 	}); // window scroll
+
+	$('.search')
 }
 </script>
 <?php 

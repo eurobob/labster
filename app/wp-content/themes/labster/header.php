@@ -18,14 +18,21 @@
 </head>
 <body <?php echo is_front_page() ? "class='page--home'" : "" ?>>
 
-<input type="checkbox" id="menu-checkbox" class="hide">
-<label for="menu-checkbox" class="menu-toggle">
+
+<input type="radio" id="search-radio" class="hide" name="header-buttons">
+<input type="radio" id="menu-radio" class="hide" name="header-buttons">
+<input type="radio" id="close-radio" class="hide" name="header-buttons">
+
+<label for="search-radio" class="search-toggle">
+    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'search.svg'); ?>
+</label>
+
+<label for="menu-radio" class="menu-toggle">
     <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'menu.svg'); ?>
 </label>
 
-<input type="checkbox" id="search-checkbox" class="hide">
-<label for="search-checkbox" class="search-toggle">
-    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'search.svg'); ?>
+<label for="close-radio" class="close-toggle">
+    <?php require('img' . DS . 'svg' . DS . 'markup' . DS . 'close.svg'); ?>
 </label>
 
 <header class="header">
@@ -42,4 +49,5 @@
             <a class="nav__link mega" href="/about">About</a>
     </ul>
 </nav>
+<input type="text" class="search mega" placeholder="Start typing to search...">
 <main class="main">

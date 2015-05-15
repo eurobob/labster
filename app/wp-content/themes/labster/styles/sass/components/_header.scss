@@ -41,12 +41,20 @@ canvas {
 	}
 }
 
-[id=menu-checkbox]:checked {
+[id=menu-radio]:checked {
 	~ .nav {
 		transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility 0s 0s;
 		visibility: visible;
 		transform: translate(0, 0);
 		opacity: 1;
+	}
+
+	~ .menu-toggle {
+		display: none;
+	}
+
+	~ .close-toggle {
+		display: block;
 	}
 
 	~ .header {
@@ -77,6 +85,100 @@ canvas {
 		width: 1.7vw;
 		padding: 1.65vw;
 	}
+}
+
+[id=search-radio]:checked {
+	~ .nav {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	~ .menu-toggle {
+		display: none;
+	}
+
+	~ .close-toggle {
+		display: block;
+	}
+
+	~ .search {
+		display: block;
+	}
+
+	~ .header {
+		transition: transform .3s ease-in-out;
+		transform: translate(0,0) !important;
+		.logo {
+			opacity: 0;
+		}
+		.header__particles {
+			transform: translate(0,0);
+		}
+	}
+}
+
+.search {
+	height: 10vw;
+	width: 30vw;
+	position: fixed;
+	top: 4vw;
+	left: 4vw;
+	z-index: 20;
+	border-radius: 4px;
+	border: 0;
+	background: none;
+	color: #fff;
+	display: none;
+
+	&:focus {
+		outline: $primary;
+	}
+
+	@media screen and (min-width: 769px) {
+		height: 5vw;
+		width: 88vw;
+		top: 6vw;
+		left: 6vw;
+	}
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+}
+
+.close-toggle {
+	height: 6vw;
+	width: 6vw;
+	padding: 6.25vw;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 30;
+	cursor: pointer;
+	user-select: none;
+	display: none;
+
+	@media screen and (min-width: 769px) {
+		height: 2vw;
+		width: 2vw;
+		padding: 1.65vw;
+	}
+}
+
+[id=search-radio]:checked {
+
 }
 
 .header {
