@@ -80,8 +80,15 @@
 
 			.post__detail {
 				color: $secondary;
+				float: left;
+				clear: both;
+				margin-top: .5em;
 
-				+ .post__detail {
-					margin-left: 1.5em;
+				@media screen and (min-width: 768px) {
+					float: none;
+					+ .post__detail {
+						margin-top: 0;
+						margin-left: 1.5em;
+					}
 				}
 			}
