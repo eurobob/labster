@@ -1,2 +1,16 @@
+.svg-arrow-right { background-image: url('png/arrow-right.png'); background-repeat: no-repeat; }
+
+.svg-author { background-image: url('png/author.png'); background-repeat: no-repeat; }
+
 .svg-badge1 { background-image: url('png/badge1.png'); background-repeat: no-repeat; }
+
+.svg-facebook { background-image: url('png/facebook.png'); background-repeat: no-repeat; }
+
+.svg-linkedin { background-image: url('png/linkedin.png'); background-repeat: no-repeat; }
+
+.svg-tag { background-image: url('png/tag.png'); background-repeat: no-repeat; }
+
+.svg-time { background-image: url('png/time.png'); background-repeat: no-repeat; }
+
+.svg-twitter { background-image: url('png/twitter.png'); background-repeat: no-repeat; }
 

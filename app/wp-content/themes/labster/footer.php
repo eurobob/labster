@@ -1,4 +1,52 @@
 </main>
+
+
+<footer class="footer">
+
+	<div class="footer__links">
+		<div class="footer__section">
+			<h4 class="footer__title alpha">Our Labs</h4>
+			<a class="footer__item gamma" href="/features">Features</a>
+			<a class="footer__item gamma" href="/courses">Course Catalog</a>
+			<a class="footer__item gamma" href="/testimonial">Testimonials</a>
+		</div>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">About</h4>
+			<a class="footer__item gamma" href="/about">About Us</a>
+			<a class="footer__item gamma" href="/press">Press</a>
+			<a class="footer__item gamma" href="/support">Support</a>
+		</div>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">Join Us</h4>
+			<a class="footer__item gamma" href="/career">Careers</a>
+			<a class="footer__item gamma" href="/ambassador-program">Ambassador Program</a>
+		</div>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">Contact Us</h4>
+			<a class="footer__item gamma" href="/ambassador-program">Contact Us</a>
+			<p class="footer__item gamma">+45 61437244</p>
+			<div class="footer__item">
+				<a href="https://www.facebook.com/teamlabster" class="icon svg-facebook svg--grey" data-grunticon-embed></a>
+				<a href="https://twitter.com/labster" class="icon svg-twitter svg--grey" data-grunticon-embed></a>
+				<a href="https://www.linkedin.com/company/labster" class="icon svg-linkedin svg--grey" data-grunticon-embed></a>
+				<a href="https://www.youtube.com/user/LabsterVirtualLab" class="icon svg-youtube svg--grey" data-grunticon-embed></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer__credits text--center">
+		<span>&copy; <?php echo date("Y"); ?> Labster ApS</span>
+		<span>CVR: 34457808</span>
+		<span>
+			<a href="#">Terms and Conditions</a>
+		</span>
+		<span>
+			<a href="#">Privacy Policy</a>
+		</span>
+	</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
@@ -113,85 +161,71 @@
       "retina_detect": true
     });
 
-</script>
+window.onload = function(e){ 
 
-<script>
+	$window = $(window);
 
-window.$ = function(selector) {
-    var selectorType = 'querySelectorAll';
+	var windowHeight = $window.height();
 
-    if (selector.indexOf('#') === 0) {
-        selectorType = 'getElementById';
-        selector = selector.substr(1, selector.length);
-    }
+	$window.scroll(function() {
 
-    return document[selectorType](selector);
-};
+		var windowWidth = $window.width(),
+			paddingTop = windowWidth * 0.3;
 
+		if (windowWidth > 768) {
 
-$window = $(window);
+			var scrollTop = $window.scrollTop();
 
-var windowHeight = $window.height();
-
-$window.scroll(function() {
-
-	var windowWidth = $window.width();
-	if (windowWidth > 1000) {
-
-    	var scrollTop = $window.scrollTop();
-
-    	window.requestAnimationFrame(function(){
-
-		// For each element that has a data-type attribute
-			$('.section').each(function(index){
-
-				// Store some variables based on where we are
-				var $self = $(this),
-					topOffset = index * windowHeight,
-					percentage = -(scrollTop - topOffset) / windowHeight * 100;
-		
-				// If this section is in view
-				if ( (scrollTop + windowHeight) > (topOffset) && scrollTop < (windowHeight*1.5) + topOffset ) {
+			var percentage = scrollTop / paddingTop * 100;
 					
-					$('[data-type="heading-zoom"]', $self).each(function() {
-						
-						var $sprite = $(this);
-						var zoomPercentage = percentage + $sprite.data('offset');
+			var $logo = $('.logo');
+			var $header = $('.header');
 
-						var scale = (100 - Math.floor(zoomPercentage))/100;
+			var scale = (100 - Math.floor(percentage * 0.82) )/100;
 
-						if (scale >= 1) {
-							$sprite.css({
-								transform: 'translate(-50%, -50%) scale(1)',
-								opacity: 1
-							});
-						} else if (scale > 0) {
-							$sprite.css({
-								transform: 'translate(-50%, -50%) scale(' + scale + ')',
-								opacity: scale
-							});
-						} else {
-							$sprite.css({
-								transform: 'translate(-50%, -50%) scale(0)',
-								opacity: 0
-							});
-						}
-						
-					});
-				
-				}
-		
-			});	// each data-type
-		
-		}); //requestAnimationFrame
-	}
+			if (percentage >= 82) {
+				$header.css({ transform: 'translate(0, -82%) translateZ(0)' });
+			} else if (percentage < 82) {
+				$header.css({ transform: 'translate(0, -'+ percentage +'%) translateZ(0)' });
+			}
 
-}); // window scroll
+			if (percentage >= 82) {
+				$logo.css({ transform: 'translate(0, 50%) scale(0.3)' });
+			} else if (percentage < 82 && percentage > 0) {
+				$logo.css({ transform: 'translate(0, '+ ((percentage/82*100) - 50) +'%) scale(' + scale + ')' });
+			} else if (percentage < 0) {
+				$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+			} 
+		}
+
+	}); // window scroll
+
+	$('.search-toggle svg').click(function(){
+		setTimeout(function(){
+			$('.search').focus();
+		}, 400);
+	});
+
+	$('.search').keypress(function(event) {
+		event.stopPropagation();
+	});
+
+	$('html').keypress(function(event) {
+		$('#search-radio').attr('checked', 'checked');
+		var e = $.Event('keydown');
+		e.which = event.which;
+		$('.search').trigger(e);
+		setTimeout(function(){
+			$('.search').focus();
+		}, 400);
+	});
+
+}
 </script>
 <?php 
 
 // Grunticon stuff for lazily loaded svg embedding & styling
-$embeddedSVGdir = 'wp-content/themes/labster/dist/img/svg/embed';
+$embeddedSVGdir = '/wp-content/themes/labster/dist/img/svg/embed/';
 ?>
 <script src="<?php echo $embeddedSVGdir; ?>grunticon.loader.js"></script>
 <script>
