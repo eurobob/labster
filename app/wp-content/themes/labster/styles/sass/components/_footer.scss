@@ -18,8 +18,16 @@
 		}
 
 			.footer__title {
+				width: 90%;
 				font-family: nexa_bd;
 				text-transform: uppercase;
+				padding-bottom: .2em;
+				border-bottom: 1px solid $text-light;
+			}
+
+			.footer__link {
+				display: block;
+				padding:1.5em 0 0;
 			}
 
 	.footer__credits {
