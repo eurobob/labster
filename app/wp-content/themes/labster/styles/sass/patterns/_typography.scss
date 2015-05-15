@@ -112,7 +112,6 @@ a {
 
 .mega,
 %mega {
-    @include font-size(3.5);
     
     @media screen and (min-width: 450px) {
       @include font-size($h2-size);
