@@ -25,10 +25,12 @@
 			<h4 class="footer__title alpha">Contact Us</h4>
 			<a class="footer__item gamma" href="/ambassador-program">Contact Us</a>
 			<p class="footer__item gamma">+45 61437244</p>
-			<a href="https://www.facebook.com/teamlabster" class="icon svg-facebook svg--grey" data-grunticon-embed></a>
-			<a href="https://twitter.com/labster" class="icon svg-twitter svg--grey" data-grunticon-embed></a>
-			<a href="https://www.linkedin.com/company/labster" class="icon svg-linkedin svg--grey" data-grunticon-embed></a>
-			<a href="https://www.youtube.com/user/LabsterVirtualLab" class="icon svg-youtube svg--grey" data-grunticon-embed></a>
+			<div class="footer__item">
+				<a href="https://www.facebook.com/teamlabster" class="icon svg-facebook svg--grey" data-grunticon-embed></a>
+				<a href="https://twitter.com/labster" class="icon svg-twitter svg--grey" data-grunticon-embed></a>
+				<a href="https://www.linkedin.com/company/labster" class="icon svg-linkedin svg--grey" data-grunticon-embed></a>
+				<a href="https://www.youtube.com/user/LabsterVirtualLab" class="icon svg-youtube svg--grey" data-grunticon-embed></a>
+			</div>
 		</div>
 	</div>
 	
