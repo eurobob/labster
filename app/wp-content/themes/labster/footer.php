@@ -4,17 +4,17 @@
 <footer class="footer">
 
 	<div class="footer__links">
-		<div>
-			<h4>Our Labs</h4>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">Our Labs</h4>
 		</div>
-		<div>
-			<h4>About</h4>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">About</h4>
 		</div>
-		<div>
-			<h4>Join Us</h4>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">Join Us</h4>
 		</div>
-		<div>
-			<h4>Contact Us</h4>
+		<div class="footer__section">
+			<h4 class="footer__title alpha">Contact Us</h4>
 		</div>
 	</div>
 	
@@ -144,10 +144,6 @@
       },
       "retina_detect": true
     });
-
-</script>
-
-<script>
 
 window.onload = function(e){ 
 

@@ -27,7 +27,7 @@
 
 .icon {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: bottom;
 	
 	svg {
 		height: 1em;
@@ -39,5 +39,8 @@
 svg {
 	.svg--purple & {
 		fill: $secondary;
+	}
+	.svg--aqua & {
+		fill: $primary;
 	}
 }
