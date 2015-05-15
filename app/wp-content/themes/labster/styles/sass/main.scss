@@ -43,4 +43,7 @@ svg {
 	.svg--aqua & {
 		fill: $primary;
 	}
+	.svg--grey & {
+		fill: $text-light;
+	}
 }
