@@ -1,6 +1,6 @@
 .footer {
-	color: $text-light;
 	background-color: $light-grey;
+	color: $text-light;
 }
 
 	.footer__links {
@@ -18,7 +18,7 @@
 		}
 
 			.footer__title {
-				width: 90%;
+				width: 80%;
 				font-family: nexa_bd;
 				text-transform: uppercase;
 				padding-bottom: .2em;
@@ -26,9 +26,10 @@
 				border-bottom: 1px solid $text-light;
 			}
 
-			.footer__link {
+			.footer__item {
 				display: block;
 				padding: .7em 0;
+				color: $text-light;
 			}
 
 	.footer__credits {
