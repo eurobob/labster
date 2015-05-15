@@ -200,7 +200,11 @@ window.onload = function(e){
 
 	}); // window scroll
 
-	$('.search')
+	$('.search-toggle svg').click(function(){
+		setTimeout(function(){
+			$('.search').focus();
+		}, 400);
+	});
 }
 </script>
 <?php 
