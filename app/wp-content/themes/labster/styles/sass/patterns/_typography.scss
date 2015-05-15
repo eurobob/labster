@@ -112,16 +112,9 @@ a {
 
 .mega,
 %mega {
+    @include font-size($h1-size);
     
-    @media screen and (min-width: 450px) {
-      @include font-size($h2-size);
-    }
-    
-    @media screen and (min-width: 640px) {
-      @include font-size($h1-size);
-    }
-    
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 768px) {
       @include font-size($kilo-size);
     }
 
