@@ -6,13 +6,7 @@
     <meta name="description" content="">
 
     <title>Labster</title>
-
-    <!--[if lt IE 9]>
-        <link rel="stylesheet" href="/wp-content/themes/labster/dist/css/ie.css">
-    <![endif]-->
-    <!--[if !IE]><!-->
-    	<link rel="stylesheet" href="/wp-content/themes/labster/dist/css/main.css">
-    <!--<![endif]-->
+    <link rel="stylesheet" href="/wp-content/themes/labster/dist/css/main.css">
     
     <!--<script src="/wp-content/themes/labster/js/vendor/modernizr.custom.js"></script>-->
 </head>
