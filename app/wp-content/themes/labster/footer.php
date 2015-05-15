@@ -205,6 +205,21 @@ window.onload = function(e){
 			$('.search').focus();
 		}, 400);
 	});
+
+	$('.search').keypress(function(event) {
+		event.stopPropagation();
+	});
+
+	$('html').keypress(function(event) {
+		$('#search-radio').attr('checked', 'checked');
+		var e = $.Event('keydown');
+		e.which = event.which;
+		$('.search').trigger(e);
+		setTimeout(function(){
+			$('.search').focus();
+		}, 400);
+	});
+
 }
 </script>
 <?php 
