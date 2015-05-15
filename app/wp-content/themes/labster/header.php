@@ -7,7 +7,7 @@
 
     <title>Labster</title>
 
-    <!--[if lte IE 9]>
+    <!--[if lt IE 9]>
         <link rel="stylesheet" href="/wp-content/themes/labster/dist/css/ie.css">
     <![endif]-->
     <!--[if !IE]><!-->
