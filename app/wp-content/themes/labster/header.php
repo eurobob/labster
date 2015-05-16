@@ -42,6 +42,8 @@
         <li class="nav__item">
             <a class="nav__link mega" href="/features">Features</a>
         <li class="nav__item">
+            <a class="nav__link mega" href="/blog">Blog</a>
+        <li class="nav__item">
             <a class="nav__link mega" href="/about">About</a>
     </ul>
 </nav>
