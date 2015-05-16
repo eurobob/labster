@@ -31,7 +31,9 @@
 
 <header class="header">
     <div id="particles-js" class="header__particles"></div>
-    <h1 class="logo">Labster</h1>
+    <h1 class="logo">
+        <a href="/">Labster</a>
+    </h1>
 </header>
 <nav class="nav text--center caps">
     <ul class="nav__list">

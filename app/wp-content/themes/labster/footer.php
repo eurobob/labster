@@ -190,11 +190,11 @@ window.onload = function(e){
 			}
 
 			if (percentage >= 82) {
-				$logo.css({ transform: 'translate(0, 50%) scale(0.3)' });
+				$logo.css({ transform: 'translate(-50%, 50%) scale(0.3)' });
 			} else if (percentage < 82 && percentage > 0) {
-				$logo.css({ transform: 'translate(0, '+ ((percentage/82*100) - 50) +'%) scale(' + scale + ')' });
+				$logo.css({ transform: 'translate(-50%, '+ ((percentage/82*100) - 50) +'%) scale(' + scale + ')' });
 			} else if (percentage < 0) {
-				$logo.css({ transform: 'translate(0, -50%) scale(1)' });
+				$logo.css({ transform: 'translate(-50%, -50%) scale(1)' });
 			} 
 		}
 
@@ -208,16 +208,6 @@ window.onload = function(e){
 
 	$('.search').keypress(function(event) {
 		event.stopPropagation();
-	});
-
-	$('html').keypress(function(event) {
-		$('#search-radio').attr('checked', 'checked');
-		var e = $.Event('keydown');
-		e.which = event.which;
-		$('.search').trigger(e);
-		setTimeout(function(){
-			$('.search').focus();
-		}, 400);
 	});
 
 }
