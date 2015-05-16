@@ -8,7 +8,7 @@
 			<h4 class="footer__title beta">Our Labs</h4>
 			<a class="footer__item gamma" href="/features">Features</a>
 			<a class="footer__item gamma" href="/courses">Course Catalog</a>
-			<a class="footer__item gamma" href="/testimonial">Testimonials</a>
+			<a class="footer__item gamma" href="/testimonials">Testimonials</a>
 		</div>
 		<div class="footer__section">
 			<h4 class="footer__title beta">About</h4>

@@ -25,7 +25,7 @@
 		        	<p class="post__excerpt">
 		        		<?php echo get_the_excerpt(); ?>
 		        		<a href="<?php echo $post->post_name; ?>" class="btn post__continue">
-		        			<span>continue reading</span>
+		        			continue reading
 		        		</a>
 		        	</p>
 		        	<div class="post__details">
