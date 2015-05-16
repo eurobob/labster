@@ -29,7 +29,7 @@ if( stristr( $_SERVER['SERVER_NAME'], "labster.dev" ) ) {
         // Dev will always want debug on and caching off
         define( 'WP_DEBUG', true );
         
-} else {
+} else if ( stristr( $_SERVER['SERVER_NAME'], "labster.europeanbob.co.uk" ) ) {
 
         // Production Environment
         define( 'DB_NAME', 'labster' );
@@ -38,6 +38,20 @@ if( stristr( $_SERVER['SERVER_NAME'], "labster.dev" ) ) {
         define( 'DB_HOST', 'main.cnylrglbgip8.eu-west-1.rds.amazonaws.com' );
 
         define( 'WP_HOME', 'http://labster.europeanbob.co.uk');
+        define( 'WP_SITEURL', WP_HOME);
+
+        // Live Environment will always be the same as production so turn off debug and turn on caching
+        define( 'WP_DEBUG', true );
+        
+} else if ( stristr( $_SERVER['SERVER_NAME'], "labster-v2.europeanbob.co.uk" ) ) {
+
+        // Production Environment
+        define( 'DB_NAME', 'labster' );
+        define( 'DB_USER', 'admin' );
+        define( 'DB_PASSWORD', 'zAD-SBK-pf2-6J4' );
+        define( 'DB_HOST', 'main.cnylrglbgip8.eu-west-1.rds.amazonaws.com' );
+
+        define( 'WP_HOME', 'http://labster-v2.europeanbob.co.uk');
         define( 'WP_SITEURL', WP_HOME);
 
         // Live Environment will always be the same as production so turn off debug and turn on caching
